@@ -217,12 +217,17 @@ tr {
 </div>
 
 <script>
-let profit = 2.02;
+let profit = 9.456975;
 
+// Set starting value immediately
+document.getElementById("profit").innerText = profit.toFixed(6) + " PI";
+
+// Update every 2 seconds
 setInterval(() => {
-  profit += 0.1;
-  document.getElementById("profit").innerText = profit.toFixed(1) + " PI";
-}, 1);
+  profit += 0.000001;
+  document.getElementById("profit").innerText = profit.toFixed(6) + " PI";
+}, 2000);
+
 
 function connectWallet() {
   alert("Wallet Connected Successfully");
@@ -241,7 +246,7 @@ function calculate() {
   const total = amount + reward;
 
   document.getElementById("result").innerHTML =
-    "Estimated Reward: " + reward.toFixed(0.01) + " PI<br>Total After Lock: " + total.toFixed(0.01) + " PI";
+    "Estimated Reward: " + reward.toFixed(2) + " PI<br>Total After Lock: " + total.toFixed(2) + " PI";
 }
 </script>
 
