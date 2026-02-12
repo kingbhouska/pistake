@@ -221,7 +221,7 @@ let profit = 2.02;
 
 setInterval(() => {
   profit += 0.1;
-  document.getElementById("profit").innerText = profit.toFixed(2) + " PI";
+  document.getElementById("profit").innerText = profit.toFixed(1) + " PI";
 }, 1);
 
 function connectWallet() {
@@ -241,7 +241,7 @@ function calculate() {
   const total = amount + reward;
 
   document.getElementById("result").innerHTML =
-    "Estimated Reward: " + reward.toFixed(2) + " PI<br>Total After Lock: " + total.toFixed(2) + " PI";
+    "Estimated Reward: " + reward.toFixed(0.01) + " PI<br>Total After Lock: " + total.toFixed(0.01) + " PI";
 }
 </script>
 
